@@ -1,26 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Mobile class="md:hidden" :appData="appData" />
+    <Desktop class="hidden md:block" :appData="appData" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Mobile from './components/layouts/Mobile'
+import Desktop from './components/layouts/Desktop'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    Mobile,
+    Desktop
+  },
+
+  data () {
+    return {
+      appData: {
+        logoLink: 'https://iabm-content.s3.us-east-2.amazonaws.com/member_logos/fx-digital.png'
+      }
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
