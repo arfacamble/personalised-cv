@@ -1,25 +1,22 @@
 <template>
-  <div>
-    <Mobile class="md:hidden" :appData="appData" />
-    <Desktop class="hidden md:block" :appData="appData" />
+  <div class="h-screen">
+    <Banner :logoUrl="logoUrl" :jobTitle="jobTitle" />
   </div>
 </template>
 
 <script>
-import Mobile from './components/layouts/Mobile'
-import Desktop from './components/layouts/Desktop'
+import Banner from './components/large/Banner'
 
 export default {
   components: {
-    Mobile,
-    Desktop
+    Banner
   },
 
   data () {
     return {
-      appData: {
-        logoLink: 'https://iabm-content.s3.us-east-2.amazonaws.com/member_logos/fx-digital.png'
-      }
+      logoUrl: 'https://iabm-content.s3.us-east-2.amazonaws.com/member_logos/fx-digital.png',
+      jobTitle: 'Junior Full Stack Developer',
+      companyName: 'FX Digital'
     }
   }
 }
