@@ -1,9 +1,9 @@
 <template>
   <div class="h-screen">
-    <Banner :logoUrl="logoUrl" :jobTitle="jobTitle" />
+    <Banner :logoUrl="logoUrl" :jobTitle="jobTitle" :companyName="companyName" />
     <div class="flex bg-secondary h-3/5 justify-center">
       <div class="flex h-full items-center w-full sm:w-7/8 md:w-4/5 lg:w-3/4">
-        <SideNav :tabs="navTabs" />
+        <SideNav :tabs="navTabs" @select-tab="selectTab"/>
       </div>
     </div>
   </div>
@@ -27,12 +27,23 @@ export default {
       navTabs: {
         home: { id: 'home', title: 'Cover', iconName: 'feed', current: true},
         values: { id: 'values', title: 'Values', iconName: 'question_answer', current: false},
+        experience: { id: 'experience', title: 'Experience', iconName: 'work_outline', current: false},
         projects: { id: 'projects', title: 'Projects', iconName: 'precision_manufacturing', current: false},
         technologies: { id: 'technologies', title: 'Technologies', iconName: 'code', current: false},
         education: { id: 'education', title: 'Education', iconName: 'history_edu', current: false},
         hobbies: { id: 'hobbies', title: 'Hobbies', iconName: 'fingerprint', current: false},
         bonus: { id: 'bonus', title: 'Bonus', iconName: 'all_inclusive', current: false}
       }
+    }
+  },
+
+  methods: {
+    selectTab (tabSelected) {
+      const tabNames = Object.keys(this.navTabs)
+      tabNames.forEach(tab => {
+        this.navTabs[tab].current = false
+      })
+      this.navTabs[tabSelected].current = true
     }
   }
 }

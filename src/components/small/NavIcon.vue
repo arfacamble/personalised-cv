@@ -1,10 +1,10 @@
 <template>
-  <div class="h-9 sm:h-10 w-9 sm:w-10 flex justify-center items-center rounded-full border-2">
+  <div class="h-8 sm:h-10 w-8 sm:w-10 flex justify-center items-center rounded-full border-2">
     <span>
       <div
-        :class="[current ? 'text-purple-500' : 'text-gray-500', 'h-8 w-8 flex justify-center items-center']"
+        class="flex justify-center items-center"
       >
-        <i class="material-icons-outlined">{{iconName}}</i>
+        <i class="material-icons-outlined text-xl sm:text-2xl">{{iconName}}</i>
       </div>
     </span>
   </div>
@@ -20,16 +20,6 @@
       current: {
         required: true,
         type: Boolean
-      }
-    },
-
-    computed: {
-      divClass () {
-        let classes = "h-10 w-10 flex justify-center items-center rounded-full border-2 border-gray-300"
-        if (this.current) {
-          classes += " border-indigo-500"
-        }
-        return classes
       }
     }
   }
