@@ -8,6 +8,8 @@
       :date="card.date"
       :imageUrl="card.imageUrl"
       :text="card.text"
+      :quotes="card.quotes"
+      :bulletpoints="card.bulletpoints"
     />
   </div>
 </template>
