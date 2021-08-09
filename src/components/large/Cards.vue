@@ -3,6 +3,8 @@
     <Card
       v-for="card in cards"
       :key="card.id"
+      :id="`${card.id}-card`"
+      :cardId="card.id"
       :institution="card.institution"
       :title="card.title"
       :date="card.date"
@@ -10,6 +12,24 @@
       :text="card.text"
       :quotes="card.quotes"
       :bulletpoints="card.bulletpoints"
+      :enlargedOnRender="card.enlargedOnRender"
+      :collapsible="card.collapsible"
+    />
+    <Card
+      v-for="card in cards"
+      :key="`${card.id}2`"
+      :id="`${card.id}-card-hidden`"
+      :cardId="`${card.id}-hidden`"
+      :institution="card.institution"
+      :title="card.title"
+      :date="card.date"
+      :imageUrl="card.imageUrl"
+      :text="card.text"
+      :quotes="card.quotes"
+      :bulletpoints="card.bulletpoints"
+      class="mt-24"
+      :hidden="true"
+      :enlargedOnRender="true"
     />
   </div>
 </template>
@@ -23,7 +43,6 @@ export default {
   },
 
   props: {
-    title: { required: true, type: String },
     cards: { required: true, type: Object }
   }
 }
