@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen">
     <Banner :logoUrl="logoUrl" :jobTitle="jobTitle" :companyName="companyName" />
-    <div class="flex bg-secondary h-3/5 justify-center">
+    <div class="flex bg-secondary h-4/5 md:h-3/4 justify-center">
       <div class="flex h-full items-center w-full sm:w-7/8 md:w-4/5 lg:w-3/4">
         <SideNav :tabs="navTabs" @select-tab="selectTab"/>
         <div class="flex-grow h-full p-2 sm:p-4 md:p-8">
@@ -26,8 +26,24 @@
                   :bulletpoints="project.bulletpoints"
                 />
               </div>
-              <div v-if="navTabs.values.current" class="flex justify-center items-center h-full">
-                <div class="bg-primary h-24 w-24" @click="transitionColor" id="colorDiv"></div>
+              <div v-if="navTabs.values.current">
+                <ResponseCard v-for="value in values"
+                  :key="value.id"
+                  :title="value.title"
+                  :text="value.text"
+                  :valueImgUrl="value.imgUrl"
+                  :responseImgUrl="value.responseImgUrl"
+                />
+              </div>
+              <div v-if="navTabs.competencies.current">
+                <ResponseCard v-for="competency in competencies"
+                  :key="competency.id"
+                  :id="competency.id"
+                  :title="competency.title"
+                  :text="competency.text"
+                  :imgUrl="competency.imgUrl"
+                  :responseImgUrl="competency.responseImgUrl"
+                />
               </div>
             </div>
           </div>
@@ -44,6 +60,7 @@ import Cover from './components/large/Cover'
 import Cards from './components/large/Cards'
 import HobbyCard from './components/small/HobbyCard'
 import ProjectCard from './components/small/ProjectCard'
+import ResponseCard from './components/small/ResponseCard'
 
 export default {
   components: {
@@ -52,7 +69,8 @@ export default {
     Cover,
     Cards,
     HobbyCard,
-    ProjectCard
+    ProjectCard,
+    ResponseCard
   },
 
   data () {
@@ -64,15 +82,16 @@ export default {
         cover: { id: 'cover', title: 'Cover', iconName: 'feed', current: false},
         values: { id: 'values', title: 'Values', iconName: 'question_answer', current: false},
         experience: { id: 'experience', title: 'Experience', iconName: 'work_outline', current: false},
-        projects: { id: 'projects', title: 'Projects', iconName: 'precision_manufacturing', current: true},
-        technologies: { id: 'technologies', title: 'Technologies', iconName: 'code', current: false},
+        projects: { id: 'projects', title: 'Projects', iconName: 'precision_manufacturing', current: false},
+        competencies: { id: 'competencies', title: 'Competencies', iconName: 'code', current: true},
         education: { id: 'education', title: 'Education', iconName: 'history_edu', current: false},
         hobbies: { id: 'hobbies', title: 'Hobbies', iconName: 'fingerprint', current: false},
         bonus: { id: 'bonus', title: 'Bonus', iconName: 'all_inclusive', current: false}
       },
-      cover: ["In recent years I have demonstrated my ability to thrive under pressure and nurture working relationships as a teacher. Having always had a passion for problem solving, whether in Maths Olympiads or Philosophical Logic, I decided to retrain as a developer.",
+      cover: ["Over several years I demonstrated my ability to thrive under pressure and nurture working relationships as a teacher. My success as a teacher was dependent on reliability and consistency in both meeting and setting expectations, teamwork and clear communication with students and colleagues, and excellent time management",
+        "I wanted to keep learning new skills and having always had a passion for problem solving, whether in Maths Olympiads or Philosophical Logic, I decided to retrain as a developer.",
         "I excelled and enjoyed myself on the le Wagon bootcamp, and have been invited back to help the next cohorts as a teaching assistant and a lecturer. Since the bootcamp, I have deepened my understanding of the content covered through helping other students and have stretched myself with mini-projects on further content such as SQL, testing and React.",
-        "In my first developer job, I am looking for a role where I will be expected to deliver but where I will have senior colleagues who I can learn from."
+        "In my first developer job, I am looking for a role where I will be expected to deliver but where I will have  a collaborative team and senior colleagues who I can learn with and from."
       ],
       experience: {
         lewagon: { id: 'lewagon', institution: 'le Wagon', title: 'Lecturer & Teaching Assistant', date: 'Apr 2021 - Present', enlargedOnRender: false, collapsible: true,
@@ -145,6 +164,38 @@ export default {
           imageUrl: 'minesweeperreact.png',
           bulletpoints: ['the classic game', 'coded in ReactJS', 'avoid making explosions']
         },
+        rusty: { id: 'rusty', title: 'Rusty\'s Amusements', url: 'http://rusty-amusements.herokuapp.com',
+          imageUrl: 'rusty.png',
+          bulletpoints: ['marketplace web app', 'Ruby on Rails', 'rent derelict amusement park rides for an unforgettable party experience']
+        },
+      },
+      values: {
+        passion: { id: 'passion', title: 'Passion',
+          text: 'Since starting the bootcamp I have been excited at the prospect of learning more about programming each day. I look forward to the challenge of finding robust and flexible solutions to challenging problems'
+        },
+        innovation: { id: 'innovation', title: 'Innovation',
+          text: 'In approaching any problem I would rather spend more time planning a comprehensive and elegant solution, for example using the principles of DDD, than execute the first thing that comes to mind and debugging until it works... for now.'
+        },
+        accountability: { id: 'accountability', title: 'Accountability',
+          text: 'As a teacher I was responsible at any given time for the maths education of around 130 students, while managing the concerns of parents, department heads and senior leadership around that. I appreciate the need to be proactive in action and communication with all relevant stakeholders.'
+        },
+        humility: { id: 'humility', title: 'Humility',
+          text: 'While confident in my potential as a developer and my ability given my experience level, I know that I understand only the tiniest fraction of the subject. I hope to keep up my pace of learning, collaborating with others at my level and learning from those more experienced.'
+        }
+      },
+      competencies: {
+        html: { id: 'html', title: 'HTML', imgUrl: 'https://rapidapi.com/blog/wp-content/uploads/2018/06/logo-2582748_640.png',
+          text: 'I am confident and competent working in HTML and extended versions such as .html.erb files in rails or in the context of templating in Vue or React.'
+        },
+        css: { id: 'css', title: 'CSS', imgUrl: 'https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png',
+          text: 'I understand how to use plain CSS, and have experience using libraries and frameworks such as bootstrap and tailwind. I have also enjoyed using the SCSS file format.'
+        },
+        js: { id: 'js', title: 'JavaScript', imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png',
+          text: 'I am trained in ES6 and familiar with older syntax. I have worked in both Vue and React. However, I am also comfortable manipulating the DOM directly where necessary, as you can see with the expanding divs in the experience tab.'
+        },
+        responsive: { id: 'responsive', title: 'Responsive Design', imgUrl: 'https://brolik.com/blog/wp-content/uploads/2013/05/BRO_ResponsiveDesign_Main2.png',
+          text: 'An area in which I still have room to improve and look forward to learning best practices, but I have designed this application site to adapt to different screen sizes.'
+        }
       }
     }
   },
