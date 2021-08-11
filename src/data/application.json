@@ -86,7 +86,7 @@
   },
   "projects": {
     "megalithipedia": { "id": "megalithipedia", "title": "Megalithipedia", "url": "https://great-stones.herokuapp.com",
-      "imageUrl": "megalithipedia.png",
+      "imageUrl": "megalithipedia.jpg",
       "bulletpoints": ["discover megalithic sites such as Stonehenge", "connect with fellow appreciators of the ancient", "plan walking trips with your friends"]
     },
     "minesweeperreact": { "id": "minesweeperreact", "title": "Minesweeper in React", "url": "https://arfacamble.github.io/minesweeper-in-react",
@@ -94,7 +94,7 @@
       "bulletpoints": ["the classic game", "coded in ReactJS", "avoid making explosions"]
     },
     "rusty": { "id": "rusty", "title": "Rusty's Amusements", "url": "http: //rusty-amusements.herokuapp.com",
-      "imageUrl": "rusty.png",
+      "imageUrl": "rusty.jpg",
       "bulletpoints": ["marketplace web app", "Ruby on Rails", "rent derelict amusement park rides for an unforgettable party experience"]
     }
   },
