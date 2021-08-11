@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Card
+    <CVCard
       v-for="card in cards"
       :key="card.id"
       :id="`${card.id}-card`"
@@ -15,7 +15,7 @@
       :enlargedOnRender="card.enlargedOnRender"
       :collapsible="card.collapsible"
     />
-    <Card
+    <CVCard
       v-for="card in cards"
       :key="`${card.id}2`"
       :id="`${card.id}-card-hidden`"
@@ -35,11 +35,11 @@
 </template>
 
 <script>
-import Card from '../small/Card'
+import CVCard from '../small/CVCard'
 
 export default {
   components: {
-    Card
+    CVCard
   },
 
   props: {
