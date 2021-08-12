@@ -1,3 +1,5 @@
+--YARN INSTALL--
+
 changes checklist:
 - vue.config.js       - project name
 - deploy.sh           - project name
