@@ -335,6 +335,42 @@
       "title": "Responsive Design",
       "imgUrl": "https://brolik.com/blog/wp-content/uploads/2013/05/BRO_ResponsiveDesign_Main2.png",
       "text": "An area in which I still have room to improve and look forward to learning best practices, but I have designed this application site to adapt to different screen sizes."
+    },
+    "ruby": {
+      "id": "ruby",
+      "title": "Ruby",
+      "imgUrl": "https://img.icons8.com/color/452/ruby-programming-language.png",
+      "text": "Having worked extensively in Ruby I am highly competent and confident working in it. While learning to code usign Ruby, I have always focussed on the more abstract concepts of control flow and OOP in the knowledge I will want to transfer this understanding to working in other languages in the future."
+    },
+    "rails": {
+      "id": "rails",
+      "title": "Rails",
+      "imgUrl": "https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/ruby-on-rails-512.png",
+      "text": "Similar to Ruby, while I have enjoyed working with Rails I expect to work in other frameworks and to that end I have worked to understand the principles of an MVC architecture and the concepts involved in passing information in props."
+    },
+    "TDD": {
+      "id": "TDD",
+      "title": "TDD",
+      "imgUrl": "https://cbabhusal.files.wordpress.com/2015/12/812ab30c5723956adcf8c1bbaf23e471143e1934.png",
+      "text": "While not an expert in TDD, I have experience using packages such as RSPEC for unit and model testing and Capybara for in browser end-to-end testing. You can see an example linked on my github landing page. I look forward to learning more on this in a more practical context in my first role."
+    },
+    "SQL": {
+      "id": "SQL",
+      "title": "SQL",
+      "imgUrl": "https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/postgresql.png",
+      "text": "After covering SQL at the bootcamp, I have built upon my knowledge further with a set of exercises linkked on my github landing page. I am comfortable both using SQL directly or in using an ORM such as ActiveRecord. I appreciate there are often inefficiencies in database calls when using an ORM, and I attempt to use techniques such as eager loading where possible."
+    },
+    "reactJS": {
+      "id": "reactJS",
+      "title": "ReactJS",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/320px-React-icon.svg.png",
+      "text": "As a personal project I have made a few SPAs in React since leaving the bootcamp. The most notable (although not the prettiest) is the minesweeper app you can find in the projects tab."
+    },
+    "vueJS": {
+      "id": "vueJS",
+      "title": "VueJS",
+      "imgUrl": "https://www.dotcom-monitor.com/blog/wp-content/uploads/sites/3/2020/05/Vue-logo-1.png",
+      "text": "I have self-educated in Vue in recent months and have made sites including this application and a questionnaire that linked to a PHP/Laravel backend."
     }
   }
 }
