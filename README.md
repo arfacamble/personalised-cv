@@ -9,4 +9,5 @@ changes checklist:
 - logo, job title
 - index.html Title
 - reorder/select competencies
+- VALUES
 - bonus tab??
