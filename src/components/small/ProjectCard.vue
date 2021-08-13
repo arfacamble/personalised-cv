@@ -1,7 +1,7 @@
 <template>
   <div class="my-2 border border-background border-opacity-20 rounded-md p-2">
     <div class="flex flex-col lg:flex-row">
-      <a :href="url" target="blank" class="w-full lg:w-3/5">
+      <a :href="url" target="blank" class="w-full lg:w-1/2">
         <img :src="imageUrl" alt="" class="object-cover w-full rounded-md">
       </a>
       <div class="pl-2 self-start sm:self-center">
