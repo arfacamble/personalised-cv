@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      primary: '#ff323c',
-      secondary: '#FFFFFF',
-      background: '#323232'
+      primary: "var(--primary-color)",
+      secondary: "var(--secondary-color)",
+      background: "var(--background-color)"
     },
     fontFamily: {
       headers: ['Poppins', 'sans-serif'],
