@@ -10,4 +10,5 @@ changes checklist:
 - index.html Title
 - reorder/select competencies
 - VALUES
+- COVER
 - bonus tab??
