@@ -4,13 +4,13 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      primary: '#ff323c',
-      secondary: '#FFFFFF',
-      background: '#323232'
+      primary: "var(--primary-color)",
+      secondary: "var(--secondary-color)",
+      background: "var(--background-color)"
     },
     fontFamily: {
-      headers: ['Poppins', 'sans-serif'],
-      body: ['Roboto', 'sans-serif']
+      headers: "var(--headers-font)",
+      body: "var(--body-font)"
     }
   },
   variants: {

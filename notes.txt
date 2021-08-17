@@ -1,0 +1,8 @@
+https://stackoverflow.com/questions/61508409/how-to-change-tailwind-config-js-dynamically-based-on-user-settings-in-rails
+
+set tailwind config settings as var(--kjfsdjf)
+declare values of --ksjhdf in head
+
+after load run below code sort of thing:
+
+document.documentElement.style.setProperty('--primary-color', '#234796')
