@@ -9,8 +9,8 @@ module.exports = {
       background: "var(--background-color)"
     },
     fontFamily: {
-      headers: ['Poppins', 'sans-serif'],
-      body: ['Roboto', 'sans-serif']
+      headers: "var(--headers-font)",
+      body: "var(--body-font)"
     }
   },
   variants: {

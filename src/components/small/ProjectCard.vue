@@ -21,7 +21,6 @@ export default {
   props: {
     imageUrl: { required: true, type: String },
     title: { required: true, type: String },
-    text: { required: true, type: String },
     url: { type: String },
     bulletpoints: { required: true, type: Array }
   }
